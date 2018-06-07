@@ -1,0 +1,128 @@
+body {
+  background: hsla(225, 10%, 10%, 0.1);
+
+}
+h1 {
+  text-align: center;
+}
+.wrapper {
+  width: 1280px;
+  min-height: 100vh;
+  margin: auto;
+  background: hsla(225, 50%, 50%, 0.2);
+  border: 1px solid transparent;
+}
+
+.box {
+    background-color: hsla(40, 50%, 50%, 0.5);
+}
+
+.boxSc {
+    background-color: hsla(80, 50%, 50%, 0.5);
+}
+
+.boxTs {
+    background-color: hsla(160, 50%, 50%, 0.5);
+}
+
+.boxSk{
+    background-color: hsla(240, 50%, 50%, 0.5);
+}
+
+.combination,
+.combinationTranslate,
+.combinationScale,
+.combinationSkew,
+.combinationRotate {
+  width: 250px;
+  height: 250px;
+  margin: 0 15px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  background-color: hsla(320, 50%, 50%, 0.5);
+  position: relative;
+}
+
+p {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 24px;
+}
+
+.combination p {
+  margin-top: 50px;
+}
+
+.comb {
+  position: relative;
+  background-color: hsla(320, 40%, 40%, 0.2);
+  margin: 20px auto 100px;
+}
+
+/* -----------------------------------------------------------------------*/
+.combination:hover {
+  transform: translate(100px, 10px) scale(1.5) skew(5deg, 5deg) rotate(30deg);
+}
+
+.LT:hover {
+  transform: translate(100px, 10px) scale(1.5) skew(5deg, 5deg) rotate(30deg);
+  transform-origin: left top;
+}
+
+.RB:hover {
+  transform: translate(100px, 10px) scale(1.5) skew(5deg, 5deg) rotate(30deg);
+  transform-origin: right bottom;
+}
+
+.combinationTranslate:hover {
+  transform: translate(100px, 0);
+}
+
+.combinationScale:hover  {
+  transform: scale(1.5);
+}
+
+.combinationSkew:hover {
+  transform: skew(5deg, 5deg);
+}
+
+.combinationRotate:hover {
+  transform: rotate(30deg);
+}
+
+.rightBottom {
+  transform-origin: right bottom;
+}
+
+.leftTop {
+  transform-origin: left top;
+}
+
+.center::after,
+.rightBottom::after,
+.leftTop::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: red;
+  font-size: 50px;
+}
+
+.center::after {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left:50%;
+}
+
+.rightBottom::after  {
+  right: -5px;
+  bottom: -5px;
+}
+
+.leftTop::after {
+  left: -5px;
+  top: -5px;
+}

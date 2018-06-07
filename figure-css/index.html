@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <title>Figures CSS</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="row">
+      <h2>Окружность</h2>
+      <div class="figure">
+        <p class="ring">&nbsp;</p>
+      </div>
+      <div class="code">
+        <pre>
+          <code>
+  element {
+    width: 100px;   <b> // width === height</b>
+    height: 100px;
+    <b>border-radius: 50%;</b>
+  }
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="row">
+      <h2>Треугольники </h2>
+      <div class="figure">
+        <p class="triangle"></p>
+      </div>
+      <div class="code">
+        <pre>
+              <code>
+  element {
+    <b>width: 0;    // width === height === 0
+    height: 0;</b>
+    border-bottom: 25px solid green;
+    border-left: 25px solid yellow;
+    border-right: 25px solid red;
+    border-top: 25px solid blue;
+  }              
+                </code>
+              </pre>
+      </div>
+
+    </div>
+    <div class="row">
+      <h2>Треугольник ^</h2>
+      <div class="figure">
+        <p class="triangle-t"></p>
+      </div>
+      <div class="code">
+        <pre>
+          <code>
+  element {
+    width: 0;    // width === height === 0
+    height: 0;
+    <b>border-bottom: 25px solid green;</b>
+    border-left: 25px solid transparent;  <b>//transparent</b>
+    border-right: 25px solid transparent;
+    border-top: 25px solid transparent;
+  }  
+          </code>        
+        </pre>
+      </div>
+    </div>
+    <div class="row">
+      <h2>Треугольник &gt;</h2>
+      <div class="figure">
+        <p class="triangle-r"></p>
+      </div>
+      <div class="code">
+        <pre>
+          <code>
+    //transparent
+    <b>border-left: 25px solid yellow;</b>
+    //transparent
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="row">
+        <h2>Треугольник v</h2>
+        <div class="figure">
+          <p class="triangle-b"></p>
+        </div>
+        <div class="code">
+          <pre>
+            <code>
+      //transparent
+      <b>border-top: 25px solid blue;</b>
+      //transparent
+            </code>
+          </pre>
+        </div>
+      </div>
+      <div class="row">
+          <h2>Треугольник &lt;</h2>
+          <div class="figure">
+            <p class="triangle-l"></p>
+          </div>
+          <div class="code">
+            <pre>
+              <code>
+        //transparent
+        <b>border-top: 25px solid red;</b>
+        //transparent
+              </code>
+            </pre>
+          </div>
+        </div>
+        <div class="row">
+          <a href="https://html5book.ru/css-figury/" target="_blank">Больше на эту тему</a>
+        </div>
+  </div>
+  <a class="back" href="../index.html">back</a>
+</body>
+
+</html>

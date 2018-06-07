@@ -1,0 +1,12 @@
+Введение в CSS тени:
+	text-shadow
+	box-shadow
+Основы 2D CSS
+	figure: triangle, ...
+	трансформации tranform:
+		translate
+		rotate
+		scale
+		sqwue
+transition
+animation

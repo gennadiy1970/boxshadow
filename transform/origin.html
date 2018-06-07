@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TransFROM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="./css/origin.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body>
+    <div class="wrapper">
+      <h1> Точка отсчета (transform-origin) и комбинация свойств</h1>
+      <div class="comb">
+          <div class="combinationTranslate center">
+            <p>translate(100px, 0)</p>
+          </div>
+          <div class="combinationScale center">
+                <p>scale(1.5)</p>
+         </div>
+         <div class="combinationSkew center">
+                <p>skew(5deg, 5deg)</p>
+         </div>
+         <div class="combinationRotate center">
+                <p>rotate(30deg)</p>
+         </div>         
+      </div>
+      <h2>transform-origin: right bottom;</h2>
+      <div class="comb">
+            <div class="combinationTranslate rightBottom">
+              <p>translate(100px, 0)</p>
+            </div>
+            <div class="combinationScale rightBottom">
+                  <p>scale(1.5)</p>
+           </div>
+           <div class="combinationSkew rightBottom">
+                  <p>skew(5deg, 5deg)</p>
+           </div>
+           <div class="combinationRotate rightBottom">
+                  <p>rotate(30deg)</p>
+           </div>         
+        </div>
+        <h2>transform-origin: left top;</h2>
+        <div class="comb">
+                <div class="combinationTranslate leftTop">
+                  <p>translate(100px, 0)</p>
+                </div>
+                <div class="combinationScale leftTop">
+                      <p>scale(1.5)</p>
+               </div>
+               <div class="combinationSkew leftTop">
+                      <p>skew(5deg, 5deg)</p>
+               </div>
+               <div class="combinationRotate leftTop">
+                      <p>rotate(30deg)</p>
+               </div>         
+            </div>        
+        <div class="comb">
+            <div class="combination center">
+                <p>translate(100px,10px)
+                  <br> scale(1.5)
+                  <br> skew(5deg, 5deg)
+                  <br> rotate(30deg)
+                </p>
+            </div>
+            <div class="combination LT leftTop">
+                <p>transform-origin: LEFT TOP;
+                  <br>translate(100px,10px)
+                  <br> scale(1.5)
+                  <br> skew(5deg, 5deg)
+                  <br> rotate(30deg)
+                </p>
+            </div>
+            <div class="combination RB rightBottom">
+                <p>transform-origin: RIGHT BOTTOM;
+                  <br>translate(100px,10px)
+                  <br> scale(1.5)
+                  <br> skew(5deg, 5deg)
+                  <br> rotate(30deg)
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="back" href="../index.html">back</a>
+</body>
+
+</html>

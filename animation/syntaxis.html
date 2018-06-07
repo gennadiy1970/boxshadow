@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="./css/syntaxis.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div class="wrapper">
+            <div class="block">
+                <h2>Анимация</h2>
+                <h4>Преимущества перед transition</h4>
+                <ul>
+                    <li>не нужен обязательный инициатор</li>
+                    <li>возможно множество промежуточных состояний <span class="comment"> между начальным и конечным состояними</span></li>
+                </ul>
+
+                <h4>Создание анимации:</h4>
+                <ul>
+                    <li>создаем ключевые кадры <b>@keyframes</b>
+                        <ul>
+                          <li>задаем имя <b>@keyframes</b></li>
+                          <li>задаем минимум два ключевых кадра <b>from</b> и <b>to</b></li>
+                       </ul>
+                    </li>
+                    <li>перечисляем анимируемые CSS-свойства</li>
+                    <li>селектору передаем имя анимации, как значение свойства <b>animation-name</b></li>
+                    <li>дополнительные настройки <span class="comment">индивидуальные скорости выполнения, задержки и т.п.</span></li>
+                </ul>
+                <h4>Ключевой кадр:</h4>
+                <pre><code>@keyframes changeWidth {       
+<span class="comment">/*  имя должно быть описательным */</span>
+    from {
+        <span class="comment">/* Здесь перечисляются CSS-свойства */</span>
+        width: 0;
+    }
+    to {
+        <span class="comment">/* Здесь перечисляются CSS-свойства */</span>
+        width: 100%;
+    }
+}   </code></pre>
+                <h4>Применение анимации:</h4>
+                <ul>
+                    <li>Если просто добавить анимацию к стилю, который тут же применяется к элементу, 
+                            то анимация будет применена при загрузке страницы</li>
+                    <li>Анимацию можно применить к одному из псевдоклассов, включая
+                            <b>:hover</b> , <b>:active</b> , <b>:target</b> или <b>:focus</b> </li>
+                    <li>Анимацию можно применить к стилю класса, и воспользоваться JavaScript</li>
+                    <li>К одному и тому же элементу можно применить более одной анимации</li>
+                </ul>
+                <pre><code>@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.className:hover {
+    animation-name: changeWidth, fadeIn;
+    animation-duration: 1s;
+}
+
+.className:active {
+    animation-name: fadeOut;
+    animation-duration: .5s;
+}
+            </code></pre>            
+            <h4>Функция распределения скорости анимации по времени </h4>
+<pre><code>animation-timing-function: ease-out;
+animation-timing-function: cubic-bezier(1, .03, 1, .115);</code></pre> 
+<h4>Задрежка старта анимации</h4>
+<pre><code>animation-delay: 1s;</code></pre>   
+            <h4>Повторение анимации n-раз после события</h4> 
+<pre><code>animation-iteration-count: 10; <span class="comment">// повторим 10 раз </span>
+<span class="comment">// повторим бесконечно - «пульсирующий» эффект</span>
+animation-iteration-count: infinite;  
+</code></pre>  
+            <h4>Чтобы анимация при нечетных проигрываниях шла в прямом, а при нечетных — в обратном порядке</h4>
+            <pre><code>animation-direction: alternate;</code></pre>
+            <p>!!! используйте четное число animation-iteration-count для возвращения в исходное состояние !!!</p>
+
+            <h4>Сохранить элементу тот вид, который у него будет по завершении анимации</h4>
+            <pre><code>animation-fill-mode: forwards;</code></pre>
+            
+            <h4>Краткая запись свойства animation</h4>                   
+            <ul>
+                <li>имя <span class="comment">обязательно указывать</span></li>
+                <li>продолжительность <span class="comment">обязательно указывать</span></li>
+                <li>функция распределения скорости по времени</li>
+                <li>количество раз</li>
+                <li>направление</li>
+                <li>задержка</li>
+                <li>режим заполнения</li>
+                <li>пример:
+                    <pre><code>.fade {
+    animation: fadeOut 2s ease-in-out 2 alternate 5s forwards;
+}
+<span class="comment">// соответсвует</span>
+.fade {
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}</code></pre>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <a class="back" href="../index.html">back</a>
+</body>
+</html>

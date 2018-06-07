@@ -1,0 +1,123 @@
+body {
+  background: hsla(225, 10%, 10%, 0.1);
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+.wrapper {
+  max-width: 1280px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin: auto;
+  background: hsla(225, 50%, 50%, 0.2);
+  border: 1px solid transparent;
+}
+
+.box,
+.boxSc,
+.boxTs,
+.boxSk,
+.combination {
+  width: 200px;
+  height: 200px;
+  margin: 0 15px;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.box {
+    background-color: hsla(40, 50%, 50%, 0.5);
+}
+
+p {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 24px;
+}
+
+.rotate {
+  background-color: hsla(40, 40%, 40%, 0.2);
+  margin: 20px auto;
+  color: #fff;
+}
+
+/* -----------------------------------------------------------------------*/
+.d000 {
+    transform: rotate(0deg);
+    background: #800;
+}
+
+.d040 {
+    transform: rotate(40deg);
+    background: #080;
+}
+
+.d080 {
+    transform: rotate(80deg);
+    background: #008;
+}
+
+.d160 {
+    transform: rotate(160deg);
+}
+
+.d240 {
+    transform: rotate(240deg);
+}
+
+/* -----------------------------------------------------------------------*/
+.d000.ev:hover  {
+    transform: rotate(90deg);
+}
+.d040.ev {
+    z-index: 100;
+}
+.d040.ev:hover {
+    transform: rotate(130deg);
+}
+
+.d080.ev:hover {
+    transform: rotate(170deg);
+}
+
+.d160.ev:hover {
+    transform: rotate(250deg);
+}
+
+.d240.ev:hover {
+    transform: rotate(330deg);
+}
+/* -------------------------------------------------------*/
+/*
+ul {
+  margin-top: 100px;
+  margin-left: 100px;
+  
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+  transform: skew(-10deg, 0);
+}
+
+a {
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  padding: 20px 10px;
+  text-decoration: none;
+  background-color: hsla(240, 40%, 40%, 0.8);
+  text-transform: uppercase;
+  font-size: 24px;
+  box-shadow: -1px -2px 2px 2px hsla(240, 0%, 40%, 0.5);
+}
+
+li:hover {
+  transform: skew( 0, 0) scale(1.2, 1.2);
+}
+*/

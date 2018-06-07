@@ -1,0 +1,107 @@
+@font-face{
+  font-family: 'Fira Code';
+  src: url('woff2/FiraCode-Medium.woff2') format('woff2'),
+       url('woff/FiraCode-Medium.woff') format('woff'),
+       url('ttf/FiraCode-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+    background: #999;
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    width: 960px;
+    padding: 10px 20px;
+    margin: auto;
+    font-family: sans-serif;
+    background: #eee;
+  }
+  h2 {
+    text-align: center;
+  }
+  p {
+    margin: auto;
+    text-align: center;
+  }
+  .ring {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: red;
+  }
+  
+  .triangle-t {
+    width: 0;
+    padding: 0;
+    border-bottom: 25px solid green;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid transparent;;
+  }
+  
+  .triangle-b {
+    width: 0;
+    padding: 0;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid blue;;
+  }
+  
+  .triangle-r {
+    width: 0;
+    padding: 0;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid yellow;
+    border-right: 25px solid transparent;
+    border-top: 25px solid transparent;;
+  }
+  
+  .triangle-l {
+    width: 0;
+    padding: 0;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid red;
+    border-top: 25px solid transparent;;
+  }
+  
+  .triangle {
+    width: 0;
+    padding: 0;
+    border-bottom: 25px solid green;
+    border-left: 25px solid yellow;
+    border-right: 25px solid red;
+    border-top: 25px solid blue;;
+  }
+  
+  pre {
+    background: #fff;
+  }
+  code {
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-weight: 500;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 5px 2px hsla(0, 0%, 0%, 0.2);
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    width: 15%;
+  }
+
+  .figure {
+    width: 15%;
+  }
+
+  .code {
+    width: 60%;
+  }

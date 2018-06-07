@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TransFROM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/transform.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Преобразования / Transform</h1>
+        <p>Сперва устанавливаются размеры, которое должен занять элемент, 
+            а затем применяю преобразование - элемент может выйти за установленные размеры. 
+        </p>
+        <p>Точка отсчета для преобразований по умолчанию - центр прямоугольника.</p>
+        <p>Перекрытие элементов происходит по порядку в потоке выполнения.</p>
+        <h4>Примеры для rotate:</h4>
+        <div class="rotate">
+            <div class="box d000">
+                <p>rotate(0deg)</p>
+            </div>
+            <div class="box d040">
+                <p>rotate(40deg)</p>
+            </div>
+            <div class="box d080">
+                <p>rotate(80deg)</p>
+            </div>
+            <div class="box d160">
+                <p>rotate(160deg)</p>
+            </div>
+            <div class="box d240">
+                <p>rotate(240deg)</p>
+            </div>
+        </div>
+        <p>При  на 90deg может создать эффект повотора текста при неподвижном фоне.</p>
+        <p>Порядок перекрытия элементов можно изменить с помощью z-index. Т.е. transform создает контекст для z-index, как и opacity и position отличный от static</p>
+        <h4>Двойное применение rotate при hover</h4>
+        <div class="rotate">
+            <div class="box d000 ev">
+                <p>rotate(0deg)</p>
+            </div>
+            <div class="box d040 ev">
+                <!-- <p>rotate(40deg)</p> -->
+                <p>z-index: 100</p>
+            </div>
+            <div class="box d080 ev">
+                <p>rotate(80deg) </p>
+            </div>
+            <div class="box d160 ev">
+                <p>rotate(160deg)</p>
+            </div>
+            <div class="box d240 ev">
+                <p>rotate(240deg)</p>
+            </div>
+        </div>
+        <p>Если два аргумента, то первый для оси X, второй для оси Y <span class="comment">transfotm: translate(x, y)</span></p>
+        
+        <!-- <ul class="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">Goods</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul> -->
+    </div>
+    <a class="back" href="../index.html">back</a>
+</body>
+
+</html>

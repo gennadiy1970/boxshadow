@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text-shadow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/text.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div class="wrapper">
+            <h2>Text-shadow: тени для текста</h2>
+            <div class="block">
+                <h4>
+                    <span class="oilOcean1">ось X</span>,
+                    <span class="oilOcean2">ось Y</span>
+                    <span class="oilOcean3">размытие тени</span>,
+                    <span class="oilOcean4">цвет</span>,
+                </h4>
+                <div class="box intro">
+                    <pre><code><span class="oilOcean1">4px</span> <span class="oilOcean2">4px</span> <span class="oilOcean3">4px</span>  <span class="oilOcean4">hsla(0, 0%, 0%, 0.2)</span></code></pre>
+                </div>
+            </div>
+            <div class="block">
+                <h4>
+                    <span class="oilOcean1">ось X</span>,
+                    <span class="oilOcean2">ось Y</span>
+                    <span class="oilOcean3">размытие тени</span>,
+                    <span class="oilOcean4">цвет</span>,
+                </h4>
+                <div class="box axisX">
+                    <pre><code><span class="oilOcean1">10px</span> <span class="oilOcean2">0</span> <span class="oilOcean3">0</span>  <span class="oilOcean4">hsla(0, 0%, 0%, 0.2)</span></code></pre>
+                </div>
+            </div>
+            <div class="block">
+                    <h4>
+                        <span class="oilOcean1">ось X</span>,
+                        <span class="oilOcean2">ось Y</span>
+                        <span class="oilOcean3">размытие тени</span>,
+                        <span class="oilOcean4">цвет</span>,
+                    </h4>
+                    <div class="box axisY">
+                        <pre><code><span class="oilOcean1">0</span> <span class="oilOcean2">-10px</span> <span class="oilOcean3">0</span>  <span class="oilOcean4">hsla(0, 0%, 0%, 0.2)</span></code></pre>
+                    </div>
+            </div> 
+            <div class="block">
+                    <h4>
+                        <span class="oilOcean1">ось X</span>,
+                        <span class="oilOcean2">ось Y</span>
+                        <span class="oilOcean3">размытие тени</span>,
+                        <span class="oilOcean4">цвет</span>,
+                    </h4>
+                    <div class="box blur">
+*                        <pre><code><span class="oilOcean1">0</span> <span class="oilOcean2">0</span> <span class="oilOcean3">10px</span>  <span class="oilOcean4">hsla(0, 0%, 0%, 0.8)</span></code></pre>
+                    </div>
+            </div>
+            <div class="block">
+                    <h4>Множественные тени</h4>
+                    <div class="box multy">
+*                        <pre><code> -1px -1px 0 hsla(0, 100%, 50%, 0.8), 
+1px 1px 0 hsla(240, 100%, 50%, 0.8);</code></pre>
+                    </div>
+            </div>     
+            <div class="block">
+                    <a href="https://css-tricks.com/almanac/properties/t/text-shadow/">MORE TRICS</a>
+                </div>                                 
+    </div>
+    <a class="back" href="../index.html">back</a>
+</body>
+</html>
