@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Transition</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/transition.css">
-    <link rel="stylesheet" href="../css/common.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+      integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/transition.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
       <div class="block">
         <h2>Переход / Transition</h2>
         <h4>В основе переходов лежит:</h4>
         <ul>
-          <li>transition-property <span class="comment">какие свойства измененять</span></li>
-          <li>transition-duration <span class="comment">сколько времени займут измененения</span></li>
-          <li>transition-timing-function <span class="comment">как именно изменения будут зависить от времени</span></li>
-          <li>transition-delay <span class="comment">необязательная задержка перед началом изменений</span></li>
+          <li>
+            transition-property
+            <span class="comment">какие свойства измененять</span>
+          </li>
+          <li>
+            transition-duration
+            <span class="comment">сколько времени займут измененения</span>
+          </li>
+          <li>
+            transition-timing-function
+            <span class="comment"
+              >как именно изменения будут зависить от времени</span
+            >
+          </li>
+          <li>
+            transition-delay
+            <span class="comment"
+              >необязательная задержка перед началом изменений</span
+            >
+          </li>
         </ul>
         <h4>Что нужно описать для создания переходов:</h4>
         <ul>
           <li>начальный вид элемента</li>
           <li>конечный вид элемента</li>
-          <li>transition <span class="comment">property, duration, timing-function, delay</span></li>
-          <li>инициатор <span class="comment">:hover, :active, :target, :focus или на основе JavaScript</span></li>
+          <li>
+            transition
+            <span class="comment"
+              >property, duration, timing-function, delay</span
+            >
+          </li>
+          <li>
+            инициатор
+            <span class="comment"
+              >:hover, :active, :target, :focus или на основе JavaScript</span
+            >
+          </li>
         </ul>
         <h4>Краткая запись свойства transition:</h4>
         <ul>
-          <li><pre><code>transition: all 1.5s ease-in-out 200ms;</code></pre></li>
-          <li><pre><code>transition: opacity 800ms 0.2s;</code></pre></li>
-          <li>отдельное описание для каждого свойства: <ul>
-              <li><pre><code>transition: opacity 800ms, 
-              color 1.2s, 
-              height 3s 200ms;                
-              </code></pre></li>
-            </ul>
+          <li>
+            <pre><code>transition: all 1.5s ease-in-out 200ms;</code></pre>
+          </li>
+          <li>
+            <pre><code>transition: opacity 800ms 0.2s;</code></pre>
+          </li>
+          <li>
+            отдельное описание для каждого свойства:
+            <pre><code>transition: opacity 800ms, 
+color 1.2s, 
+height 3s 200ms;                
+              </code></pre>
           </li>
         </ul>
 
         <h4>Что можно аннимировать.</h4>
         <ul>
-          <li>transform
+          <li>
+            transform
             <ul>
               <li>rotate</li>
               <li>scale</li>
@@ -50,7 +85,8 @@
               <li>skew</li>
             </ul>
           </li>
-          <li>font
+          <li>
+            font
             <ul>
               <li>color</li>
               <li>font-size</li>
@@ -60,7 +96,8 @@
               <li>...</li>
             </ul>
           </li>
-          <li>box-model
+          <li>
+            box-model
             <ul>
               <li>width</li>
               <li>heigh</li>
@@ -68,7 +105,8 @@
               <li>padding</li>
             </ul>
           </li>
-          <li>position
+          <li>
+            position
             <ul>
               <li>top</li>
               <li>left</li>
@@ -78,60 +116,101 @@
           </li>
           <li>opacity</li>
           <li>
-            <a href="http://www.w3.org/TR/css3-transitions/#animatable-properties">полный список</a>
+            <a
+              href="http://www.w3.org/TR/css3-transitions/#animatable-properties"
+              >полный список</a
+            >
           </li>
         </ul>
       </div>
       <div class="block">
         <h2>EXAMPLE</h2>
         <h4>анимация подчеркивания ссылки при hover</h4>
-        <a href="https://codepen.io/Gorbulin/pen/dKpGXb" target="_blank">еще пример</a>
+        <a href="https://codepen.io/Gorbulin/pen/dKpGXb" target="_blank"
+          >еще пример</a
+        >
         <pre><code>
-            a::after {
-              content: "";
-              width: 0;
-              border-bottom: 2px solid #fff;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              transition-property: width;
-              transition-duration: .4s;
-              transition-timing-function: ease-in-out;
-            }
-            
-            a:hover::after {
-              width: 100%;
-            }          
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  width: 0;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition-property: width;
+  transition-duration: .4s;
+  transition-timing-function: ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
+}          
         </code></pre>
+        <h4>Подчеркивание в разных направлениях</h4>
+        <p>
+          <a href="../example/index.html"
+            >Пример на основе <b>transform-origin</b> и
+            <b>transform: scale</b></a
+          >
+        </p>
       </div>
       <div class="block">
         <h2>transition-timing-function</h2>
-        <p>Указывает, как быстро развивается процесс анимации во времени. Описывается кривыми Базье.</p>
+        <p>
+          Указывает, как быстро развивается процесс анимации во времени.
+          Описывается кривыми Базье.
+        </p>
         <ul>
           <li>ease <span class="comment">default</span></li>
           <li>ease-in</li>
           <li>ease-out</li>
           <li>ease-in-out</li>
           <li>linear</li>
-          <li>cubic-bezier(0.250, 0.250, 0.750, 0.750) <span class="comment"> linear</span> </li>
+          <li>
+            cubic-bezier(0.250, 0.250, 0.750, 0.750)
+            <span class="comment"> linear</span>
+          </li>
         </ul>
         <h4>Кривые Безье</h4>
         <ul>
           <li>Начальная точка (x,y) === (0,0)</li>
           <li>Конечная точка (x, y) === (1,1)</li>
-          <li>Для промежуточных точек значения x должны быть в интервале  0..1, y – любым</li>
-          <li>Синтаксис кривой Безье в CSS: <ul>
-            <li>указываются координаты только двух точек: второй и третьей  </li>
-            <li>cubic-bezier(x2, y2, x3, y3)</li>
-          </ul>
-          <p>Самый простой вариант – это когда процесс развивается равномерно, «линейно» по времени. Это можно задать кривой Безье cubic-bezier(0, 0, 1, 1)</p>
+          <li>
+            Для промежуточных точек значения x должны быть в интервале 0..1, y –
+            любым
+          </li>
+          <li>
+            Синтаксис кривой Безье в CSS:
+            <ul>
+              <li>
+                указываются координаты только двух точек: второй и третьей
+              </li>
+              <li>cubic-bezier(x2, y2, x3, y3)</li>
+            </ul>
+            <p>
+              Самый простой вариант – это когда процесс развивается равномерно,
+              «линейно» по времени. Это можно задать кривой Безье
+              cubic-bezier(0, 0, 1, 1)
+            </p>
           </li>
         </ul>
-        <h4><a href="https://www.the-art-of-web.com/css/timing-function/">подробнее</a></h4>
-        <h4><a href="https://matthewlein.com/tools/ceaser">подбор функции on-line</a></h4>
+        <h4>
+          <a href="https://www.the-art-of-web.com/css/timing-function/"
+            >подробнее</a
+          >
+        </h4>
+        <h4>
+          <a href="https://matthewlein.com/tools/ceaser"
+            >подбор функции on-line</a
+          >
+        </h4>
       </div>
     </div>
     <a class="back" href="../index.html">back</a>
-</body>
-
+  </body>
 </html>
