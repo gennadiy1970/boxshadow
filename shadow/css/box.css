@@ -1,5 +1,7 @@
 .wrapper {
-  width: 960px;
+  width: 96%;
+  box-sizing: border-box;
+  padding: 1rem;
   min-height: 100vh;
   margin: auto;
   font-family: sans-serif;
@@ -13,42 +15,74 @@
   width: 90%;
   padding: 10px;
   margin: 0 auto 20px;
-  box-shadow: 0 0 5px 3px rgba(28, 73, 2, 0.5);
+  box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 .box {
-  width: 80%;
   min-height: 50px;
-  margin: auto;
-  line-height: 1;
-  border: 1px solid gold;
+  margin: 0 20px;
+  line-height: 50px;
   margin-bottom: 25px;
 }
 
 .inset {
   box-shadow: inset 4px 4px 4px 4px hsla(0, 0%, 0%, 0.2);
 }
+.outside {
+  box-shadow: 4px 4px 4px 4px hsla(0, 0%, 0%, 0.2);
+}
 
+.radius0 {
+  box-shadow: 0 0 0 0 hsla(0, 0%, 0%, 0.2);
+}
 .radius {
   box-shadow: 0 0 0 10px hsla(0, 0%, 0%, 0.2);
 }
+.radius20 {
+  box-shadow: 0 0 0 20px hsla(0, 0%, 0%, 0.2);
+}
 
+.blur0 {
+  box-shadow: 0 0 0 10px hsla(0, 0%, 0%, 0.2);
+}
 .blur {
   box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, 0.2);
 }
+.blur20 {
+  box-shadow: 0 0 20px 10px hsla(0, 0%, 0%, 0.2);
+}
 
+.axisX0{
+  box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, 0.2);
+}
 .axisX {
   box-shadow: 10px 0 10px 10px hsla(0, 0%, 0%, 0.2);
 }
+.axisX20 {
+  box-shadow: 20px 0 10px 10px hsla(0, 0%, 0%, 0.2);
+}
 
+.axisY0 {
+  box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, 0.2);
+}
 .axisY {
-  box-shadow: 0 -10px 10px 10px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 10px 10px 10px hsla(0, 0%, 0%, 0.2);
+}
+.axisY20 {
+  box-shadow: 0 20px 10px 10px hsla(0, 0%, 0%, 0.2);
 }
 
 .multy {
   box-shadow: 4px 4px 4px 4px hsla(0, 100%, 50%, 0.5),
     -4px -4px 4px 4px hsla(240, 100%, 50%, 0.5);
 }
+.multy-reverse {
+  box-shadow: -4px -4px 4px 4px hsla(0, 100%, 50%, 0.5),
+    4px 4px 4px 4px hsla(240, 100%, 50%, 0.5);
+}
 
+.oilOcean0 {
+  color: #888;
+}
 .oilOcean1 {
   color: #df0b38;
 }
@@ -66,4 +100,17 @@
 }
 .wrapper .box pre code {
   color: #800;
+}
+.color0 {
+  box-shadow: 4px 4px 4px 4px hsla(0, 0%, 0%, 0.5);
+}
+.color {
+  box-shadow: 4px 4px 4px 4px hsla(0, 100%, 50%, 0.5);
+}
+.color20 {
+  box-shadow: 4px 4px 4px 4px hsla(240, 100%, 50%, 0.5);
+}
+.row {
+  display: flex;
+  justify-content: space-between;
 }

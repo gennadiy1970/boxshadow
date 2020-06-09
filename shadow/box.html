@@ -1,92 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="./css/box.css">
-    <link rel="stylesheet" href="../css/common.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+      integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/box.css" />
+    <link rel="stylesheet" href="../css/common.css" />
 
     <title>Box-shadow</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <h2>Box-shadow: тени для блока</h2>
-        <div class="block">
+      <h2>Box-shadow: тени для блока</h2>
+
+      <div class="block">
+        <!-- <h3>inset - тень внутри или снаружи</h3> -->
+        <div class="row">
+          <div>
             <h4>
-                <span class="oilOcean1">тень внутри</span>,
-                <span class="oilOcean2">ось X</span>
-                <span class="oilOcean3">ось Y</span>,
-                <span class="oilOcean4">размытие тени</span>,
-                <span class="oilOcean5">радиус тени</span>,
-                <span class="">цвет</span>
+              <span class="oilOcean1"> inset</span
+              ><span class="oilOcean0"> ось-X ось-Y размытие радиус цвет</span>
             </h4>
             <div class="box inset">
-                <pre><code><span class="oilOcean1">inset</span> <span class="oilOcean2">4px</span> <span class="oilOcean3">4px</span> <span class="oilOcean4">4px</span> <span class="oilOcean5">4px</span> hsla(0, 0%, 0%, 0.2)</code></pre>
+              <span class="oilOcean1">inset</span>
+              <span class="oilOcean0"
+                >4px 4px 4px 4px hsla(0, 0%, 0%, 0.2)</span
+              >
             </div>
-        </div>
-        <div class="block">
+          </div>
+          <div>
             <h4>
-                ось X, ось Y, размытие тени,
-                <span class="oilOcean1">радиус тени</span>,
-                <span class="">цвет</span>
+              <span class="oilOcean0">
+                ось-X ось-Y размытие радиус цвет
+              </span>
             </h4>
-            <div class="box radius">
-                <pre><code>0 0 0 <span class="oilOcean1">10px</span> hsla(0, 0%, 0%, 0.2)</code></pre>
+            <div class="box outside">
+              <span class="oilOcean0"
+                >4px 4px 4px 4px hsla(0, 0%, 0%, 0.2)</span
+              >
             </div>
+          </div>
         </div>
-        <div class="block">
+      </div>
+
+      <div class="block">
+        <div class="row">
+          <div>
             <h4>
-                ось X, ось Y,
-                <span class="oilOcean1">размытие тени</span>,
-                <span class="oilOcean2">радиус тени</span>,
-                <span class="">цвет</span>
+              <span class="oilOcean1">ось-X</span>
+              <span class="oilOcean0"> ось-Y размытие радиус цвет</span>
+            </h4>
+            <div class="box axisX0">
+              <span class="oilOcean1">0</span>
+              <span class="oilOcean0">
+                0 10px 10px hsla(0, 0%, 0%, 0.2)
+              </span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean1">ось-X</span>
+              <span class="oilOcean0"> ось-Y размытие радиус цвет</span>
+            </h4>
+            <div class="box axisX">
+              <span class="oilOcean1">10px</span>
+              <span class="oilOcean0">
+                0 10px 10px hsla(0, 0%, 0%, 0.2)
+              </span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean1">ось-X</span>
+              <span class="oilOcean0"> ось-Y размытие радиус цвет</span>
+            </h4>
+            <div class="box axisX20">
+              <span class="oilOcean1">20px</span>
+              <span class="oilOcean0">
+                0 10px 10px hsla(0, 0%, 0%, 0.2)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Y -->
+      <div class="block">
+        <div class="row">
+          <div>
+            <h4>
+              <span class="oilOcean0">ось-X</span>
+              <span class="oilOcean1">ось-Y</span>
+              <span class="oilOcean0"> размытие радиус цвет</span>
+            </h4>
+            <div class="box axisY0">
+              <span class="oilOcean0">0</span>
+              <span class="oilOcean1">0</span>
+              <span class="oilOcean0">
+                10px 10px hsla(0, 0%, 0%, 0.2)
+              </span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean0">ось-X</span>
+              <span class="oilOcean1">ось-Y</span>
+              <span class="oilOcean0"> размытие радиус цвет</span>
+            </h4>
+            <div class="box axisY">
+              <span class="oilOcean0">0</span>
+              <span class="oilOcean1">10px</span>
+              <span class="oilOcean0">
+                10px 10px hsla(0, 0%, 0%, 0.2)
+              </span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean0">ось-X</span>
+              <span class="oilOcean1">ось-Y</span>
+              <span class="oilOcean0">размытие радиус цвет</span>
+            </h4>
+            <div class="box axisY20">
+              <span class="oilOcean0"> 0</span>
+              <span class="oilOcean1">20px</span>
+              <span class="oilOcean0">
+                10px 10px hsla(0, 0%, 0%, 0.2)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="row">
+          <div>
+            <h4>
+              <span class="oilOcean0">ось-X ось-Y</span>
+              <span class="oilOcean1">размытие</span>
+              <span class="oilOcean0">радиус цвет</span>
+            </h4>
+            <div class="box blur0">
+              <span class="oilOcean0">
+                0 0
+              </span>
+              <span class="oilOcean1">0</span>
+              <span class="oilOcean0">10px hsla(0, 0%, 0%, 0.2)</span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean0">ось-X ось-Y</span>
+              <span class="oilOcean1">размытие</span>
+              <span class="oilOcean0">радиус цвет</span>
             </h4>
             <div class="box blur">
-                <pre><code>0 0 <span class="oilOcean1">10px</span> <span class="oilOcean2">10px</span> hsla(0, 0%, 0%, 0.2)</code></pre>
+              <span class="oilOcean0">
+                0 0
+              </span>
+              <span class="oilOcean1">10px</span>
+              <span class="oilOcean0">10px hsla(0, 0%, 0%, 0.2)</span>
             </div>
-        </div>
-        <div class="block">
-                <h4>
-                        <span class="oilOcean1">ось X</span>, 
-                        ось Y,
-                        <span class="oilOcean2">размытие тени</span>,
-                        <span class="oilOcean3">радиус тени</span>,
-                        <span class="">цвет</span>
-                    </h4>            
-            <div class="box axisX">
-                    <pre><code><span class="oilOcean1">10px</span> 0 <span class="oilOcean2">10px</span> <span class="oilOcean3">10px</span> hsla(0, 0%, 0%, 0.2)</code></pre>
-            </div>
-        </div>
-        <div class="block">
+          </div>
+          <div>
             <h4>
-                ось X,
-                <span class="oilOcean1">ось Y</span>, 
-                <span class="oilOcean2">размытие тени</span>,
-                <span class="oilOcean3">радиус тени</span>,
-                <span class="">цвет</span>
-            </h4>            
-            <div class="box axisY">
-                <pre><code>0 <span class="oilOcean1">-10px</span> <span class="oilOcean2">10px</span> <span class="oilOcean3">10px</span> hsla(0, 0%, 0%, 0.2)</code></pre>
+              <span class="oilOcean0">ось-X ось-Y</span>
+              <span class="oilOcean1">размытие</span>
+              <span class="oilOcean0">радиус цвет</span>
+            </h4>
+            <div class="box blur20">
+              <span class="oilOcean0">
+                0 0
+              </span>
+              <span class="oilOcean1">20px</span>
+              <span class="oilOcean0">10px hsla(0, 0%, 0%, 0.2)</span>
             </div>
+          </div>
         </div>
-        <div class="block">
-                <h4>Множественные тени</h4>            
-                <div class="box multy">
-                    <pre><code>4px 4px 4px 4px hsla(0, 100%, 50%, 0.5),
-   -4px -4px 4px 4px hsla(240, 100%, 50%, 0.5);
-                    </code></pre>
-                </div>
-        </div>  
-        <div class="block">
-            <a href="https://css-tricks.com/almanac/properties/b/box-shadow/">MORE TRICS</a>
-        </div>      
-    </div>
-    <a class="back" href="../index.html">back</a>
-</body>
+      </div>
 
+      <div class="block">
+        <div class="row">
+          <div>
+            <h4>
+              <span class="oilOcean0">
+                ось-X ось-Y размытие
+              </span>
+              <span class="oilOcean1">
+                радиус
+              </span>
+              <span class="oilOcean0">
+                цвет
+              </span>
+            </h4>
+
+            <div class="box radius0">
+              <span class="oilOcean0">0 0 0 </span>
+              <span class="oilOcean1">0</span>
+              <span class="oilOcean0">hsla(0, 0%, 0%, 0.2)</span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean0">
+                ось-X ось-Y размытие
+              </span>
+              <span class="oilOcean1">
+                радиус
+              </span>
+              <span class="oilOcean0">
+                цвет
+              </span>
+            </h4>
+
+            <div class="box radius">
+              <span class="oilOcean0">0 0 0 </span>
+              <span class="oilOcean1">10px</span>
+              <span class="oilOcean0">hsla(0, 0%, 0%, 0.2)</span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean0">
+                ось-X ось-Y размытие
+              </span>
+              <span class="oilOcean1">
+                радиус
+              </span>
+              <span class="oilOcean0">
+                цвет
+              </span>
+            </h4>
+            <div class="box radius20">
+              <span class="oilOcean0">0 0 0 </span>
+              <span class="oilOcean1">20px</span>
+              <span class="oilOcean0">hsla(0, 0%, 0%, 0.2)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #Color -->
+      <div class="block">
+        <div class="row">
+          <div>
+            <h4>
+              <span class="oilOcean0">
+                ось-X ось-Y размытие радиус
+              </span>
+              <span class="oilOcean1">
+                цвет
+              </span>
+            </h4>
+
+            <div class="box color0">
+              <span class="oilOcean0">4px 4px 4px 4px</span>
+              <span class="oilOcean1">hsla(0, 0%, 0%, 0.5)</span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean0">
+                ось-X ось-Y размытие радиус
+              </span>
+              <span class="oilOcean1">
+                цвет
+              </span>
+            </h4>
+
+            <div class="box color">
+              <span class="oilOcean0">4px 4px 4px 4px</span>
+              <span class="oilOcean1">hsla(0, 100%, 50%, 0.5)</span>
+            </div>
+          </div>
+          <div>
+            <h4>
+              <span class="oilOcean0">
+                ось-X ось-Y размытие радиус
+              </span>
+              <span class="oilOcean1">
+                цвет
+              </span>
+            </h4>
+            <div class="box color20">
+              <span class="oilOcean0">4px 4px 4px 4px</span>
+              <span class="oilOcean1">hsla(240, 100%, 50%, 0.5)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #endColor -->
+
+      <div class="block">
+        <div class="row">
+          <div>
+            <h4><span class="oilOcean0">Множественные тени</span></h4>
+            <div class="box multy">
+                <span class="oilOcean0">4px 4px 4px 4px hsla(0, 100%, 50%, 0.5)<span class="oilOcean1">,</span><br>
+   -4px -4px 4px 4px hsla(240, 100%, 50%, 0.5);</span>
+                   
+            </div>
+          </div>
+          <div>
+            <h4> <span class="oilOcean0">Множественные тени</span></h4>
+            <div class="box multy-reverse">
+                <span class="oilOcean0">
+              -4px -4px 4px 4px hsla(0, 100%, 50%, 0.5)<span class="oilOcean1">,</span><br>
+   4px 4px 4px 4px hsla(240, 100%, 50%, 0.5);
+</span>
+            </div>
+          </div>
+          <!-- <div class="block">
+            <a href="https://css-tricks.com/almanac/properties/b/box-shadow/"
+              >MORE TRICS</a
+            >
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- <a class="back" href="../index.html">back</a> -->
+  </body>
 </html>
